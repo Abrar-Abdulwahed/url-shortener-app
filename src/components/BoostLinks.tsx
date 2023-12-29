@@ -1,6 +1,6 @@
-import { useTheme } from '@emotion/react';
-import { Box, Button, Typography, useMediaQuery } from '@mui/material';
+import { Box, Button, useMediaQuery, useTheme } from '@mui/material';
 import SectionHeading from './SectionHeading';
+
 
 const BoostLinks = () => {
 	const theme = useTheme();

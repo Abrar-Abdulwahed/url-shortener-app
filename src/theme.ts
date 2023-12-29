@@ -1,6 +1,6 @@
-// theme.js
 import { createTheme } from '@mui/material';
-import { TypographyOptions } from '@mui/material/styles/createTypography';  // Correct import
+import { Theme, CustomPaletteOptions } from './theme.d';
+import { TypographyOptions } from '@mui/material/styles/createTypography'; // Correct import
 
 // Colors
 const colors = {
@@ -30,28 +30,28 @@ const typography: TypographyOptions = {
 const theme = createTheme({
 	components: {
 		MuiButton: {
-		  styleOverrides: {
-			root: {
-			  fontWeight: 700,
-			  padding: '5px 20px',
-			  textTransform: 'capitalize',
-			  borderRadius: '50px',
+			styleOverrides: {
+				root: {
+					fontWeight: 700,
+					padding: '5px 20px',
+					textTransform: 'capitalize',
+					borderRadius: '50px',
+				},
 			},
-		  },
 		},
 		MuiLink: {
 			styleOverrides: {
-			  root: {
-				textDecoration: 'none',
-				cursor: 'pointer'
-			  },
+				root: {
+					textDecoration: 'none',
+					cursor: 'pointer',
+				},
 			},
-		  },
+		},
 	},
 	palette: {
 		primary: {
 			main: colors.primary.cyan,
-			dark: colors.primary.darkViolet
+			dark: colors.primary.darkViolet,
 		},
 		secondary: {
 			main: colors.secondary.red,
@@ -62,22 +62,21 @@ const theme = createTheme({
 			lighter: '#f0f1f6',
 			dark: colors.neutral.veryDarkBlue,
 			darker: colors.neutral.veryDarkViolet,
-		}
-	},
+		},
+	} as CustomPaletteOptions,
 	typography,
-	shadows: ["none"],
-
-});
+	shadows: ['none'],
+} as Theme);
 
 theme.typography.h2 = {
 	...typography,
 	fontSize: '1.3rem',
 	[theme.breakpoints.up('md')]: {
-	  fontSize: '1.8rem',
+		fontSize: '1.8rem',
 	},
 	[theme.breakpoints.up('lg')]: {
-	  fontSize: '2.8rem',
+		fontSize: '2.8rem',
 	},
-  };
+};
 
 export default theme;

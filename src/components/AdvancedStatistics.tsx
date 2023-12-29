@@ -6,10 +6,10 @@ import {
 	Grid,
 	Box,
 	Divider,
+    useTheme,
 	useMediaQuery,
 } from '@mui/material';
 import SectionHeading from './SectionHeading';
-import { useTheme } from '@emotion/react';
 
 const AdvancedStatistics = () => {
     const theme = useTheme();
