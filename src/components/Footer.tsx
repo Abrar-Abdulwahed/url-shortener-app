@@ -82,7 +82,7 @@ const Footer = () => {
     <Box component={'footer'} paddingBlock={'30px'} fontSize={'12px'} bgcolor='neutral.darker'>
         <Container maxWidth="lg">
             <Grid container spacing={2}>
-                <Grid item xs={4} lg={4}>
+                <Grid item xs={12} sm={4} lg={4}>
                     <img src="/logo.svg"
                         alt="url-shortener Logo"
                         width={150}
@@ -90,12 +90,12 @@ const Footer = () => {
                         style={{ filter: 'brightness(0) invert(1)' }}
                     />
                 </Grid>
-                <Grid item xs={8} lg={4} display={'flex'} justifyContent={'space-between'} padding="0">
+                <Grid item xs={12} sm={8} lg={4} display={'flex'} justifyContent={'space-between'} padding="0">
                     <List header={navLinks[0].title} links={navLinks[0].links} />
                     <List header={navLinks[1].title} links={navLinks[1].links} />
                     <List header={navLinks[2].title} links={navLinks[2].links} />
                 </Grid>
-                <Grid item xs={4} lg={4} padding="0" display={'flex'} justifyContent={'center'} sx={{ gap: '16px' }}>
+                <Grid item xs={12} lg={4} padding="0" display={'flex'} justifyContent={'center'} sx={{ gap: '16px' }}>
                     <MuiLink display={'block'} href="#"><FacebookIcon sx={{ color: "white" }} /></MuiLink>
                     <MuiLink display={'block'} href="#"><TwitterIcon sx={{ color: "white" }} /></MuiLink>
                     <MuiLink display={'block'} href="#"><PinterestIcon sx={{ color: "white" }} /></MuiLink>
