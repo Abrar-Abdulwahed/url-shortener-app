@@ -21,9 +21,6 @@ const colors = {
 
 // Typography
 const typography: TypographyOptions = {
-	// body1: {
-	// 	fontSize: '18px',
-	// },
 	fontFamily: 'Poppins, sans-serif',
 	fontWeightBold: 700,
 	fontWeightMedium: 500,
@@ -62,21 +59,25 @@ const theme = createTheme({
 		neutral: {
 			main: colors.neutral.gray,
 			light: colors.neutral.grayishViolet,
+			lighter: '#f0f1f6',
 			dark: colors.neutral.veryDarkBlue,
 			darker: colors.neutral.veryDarkViolet,
 		}
 	},
 	typography,
 	shadows: ["none"],
-	breakpoints: {
-		values: {
-			xs: 0,
-			sm: 600,
-			md: 960,
-			lg: 1280,
-			xl: 1440,
-		},
-	},
+
 });
+
+theme.typography.h2 = {
+	...typography,
+	fontSize: '1.3rem',
+	[theme.breakpoints.up('md')]: {
+	  fontSize: '1.8rem',
+	},
+	[theme.breakpoints.up('lg')]: {
+	  fontSize: '2.8rem',
+	},
+  };
 
 export default theme;

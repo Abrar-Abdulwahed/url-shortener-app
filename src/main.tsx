@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
+import 'typeface-poppins';
 import { BrowserRouter, Route, Router,  Routes, RouterProvider} from 'react-router-dom'
 
 // import Homepage from './pages/Homepage';

@@ -63,7 +63,7 @@ const Footer = () => {
     }];
 
     const ListHeading = ({ header }) => (
-        <Typography component="h3" color="white"  sx={{ mb: '16px', fontSize: 'inherit', fontWeight: 'fontWeightBold' }}>{ header }</Typography>
+        <Typography component="h3" color="white"  sx={{ mb: '16px', fontSize: 'inherit', fontWeight: 'fontWeightMedium' }}>{ header }</Typography>
     );
 
     const List = ({ header, links }) => (
@@ -80,7 +80,7 @@ const Footer = () => {
     );
   return (
     <Box component={'footer'} paddingBlock={'30px'} fontSize={'12px'} bgcolor='neutral.darker'>
-        <Container maxWidth="lg">
+        <Container>
             <Grid container spacing={2}>
                 <Grid item xs={12} sm={4} lg={4}>
                     <img src="/logo.svg"

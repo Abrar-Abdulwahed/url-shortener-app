@@ -28,7 +28,7 @@ const NavBar = () => {
 	};
   return (
     <AppBar position="static" sx={{ bgcolor: 'white' }}>
-        <Container maxWidth="lg">
+        <Container>
             <Toolbar sx={{ justifyContent: 'space-between' }}>
                 <img
                     src="/logo.svg"
@@ -90,7 +90,7 @@ const NavBar = () => {
                     <Button
                         onClick={handleCloseNavMenu}
                         size="small"
-                        sx={{ color: 'neutral.main', fontWeight: 'fontWeightBold' }}
+                        sx={{ color: 'neutral.main', fontWeight: 'fontWeightMedium' }}
                     >
                         login
                     </Button>
@@ -99,7 +99,7 @@ const NavBar = () => {
                         variant="contained"
                         color="primary"
                         size="small"
-                        sx={{ fontWeight: 'fontWeightBold', color: 'white' }}
+                        sx={{ fontWeight: 'fontWeightMedium', color: 'white' }}
                         >
                         Sign up
                     </Button>
